@@ -1,0 +1,7 @@
+{
+  "name": "GAMEOFBLADES",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
