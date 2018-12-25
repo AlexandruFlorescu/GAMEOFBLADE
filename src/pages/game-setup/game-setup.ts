@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { AddUser } from '../add-user/add-user';
 /**
  * Generated class for the GameSetupPage page.
  *
@@ -15,11 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GameSetupPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameSetupPage');
   }
+
+  openModal(){
+    alert(9);
+   let userModal = this.modalCtrl.create(AddUser, { userId: 8675309 });
+   userModal.present();
+ }
 
 }
