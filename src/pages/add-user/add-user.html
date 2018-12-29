@@ -10,9 +10,48 @@
     <ion-title>CREATE A PLAYER</ion-title>
   </ion-navbar>
 
+  <button ion-button (click)="closeModal()"><ion-icon name='close'></ion-icon></button>
+
 </ion-header>
 
 
 <ion-content padding>
+<ion-input type='text'></ion-input>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <button ion-button color='blue' block></button>
 
+    </ion-col>
+    <ion-col>
+      <button ion-button color='purple' block></button>
+
+    </ion-col>
+    <ion-col>
+      <button ion-button color='orange' block></button>
+
+    </ion-col>
+    <ion-col>
+      <button ion-button color='teal' block></button>
+
+    </ion-col>
+
+  </ion-row>
+  <ion-row>
+  <ion-col>
+    <button ion-button color='green' block></button>
+  </ion-col>
+  <ion-col>
+    <button ion-button color='aqua' block></button>
+  </ion-col>
+  <ion-col>
+    <button ion-button color='pink' block></button>
+  </ion-col>
+  <ion-col>
+    <button ion-button color='yellow' block></button>
+  </ion-col>
+
+  </ion-row>
+</ion-grid>
+<button ion-button block>SAVE</button>
 </ion-content>

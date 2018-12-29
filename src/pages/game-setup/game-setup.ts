@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-import { AddUser } from '../add-user/add-user';
+import { AddUserPage } from '../add-user/add-user';
+import { HowToPage } from '../how-to/how-to';
 /**
  * Generated class for the GameSetupPage page.
  *
@@ -23,9 +24,12 @@ export class GameSetupPage {
   }
 
   openModal(){
-    alert(9);
-   let userModal = this.modalCtrl.create(AddUser, { userId: 8675309 });
+   let userModal = this.modalCtrl.create(AddUserPage, { userId: 8675309 });
    userModal.present();
  }
 
+ startGame(){
+   let howtoModal = this.modalCtrl.create(HowToPage, { userId: 8675309 });
+   howtoModal.present();
+ }
 }

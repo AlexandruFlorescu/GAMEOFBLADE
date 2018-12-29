@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the AddUserPage page.
+ * Generated class for the HowToPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,19 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-add-user',
-  templateUrl: 'add-user.html',
+  selector: 'page-how-to',
+  templateUrl: 'how-to.html',
 })
-export class AddUserPage {
+export class HowToPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AddUserPage');
+    console.log('ionViewDidLoad HowToPage');
   }
 
-  closeModal(){
-    this.navCtrl.pop();
-  }
 }
