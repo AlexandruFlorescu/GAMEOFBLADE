@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { TabsPage } from '../pages/tabs/tabs';
 import { StartingPage } from '../pages/starting/starting';
 import { GameSetupPage } from '../pages/game-setup/game-setup';
+import { SaveProgressPage } from '../pages/save-progress/save-progress';
 
 import { AddUserPage } from '../pages/add-user/add-user';
 import { HowToPage } from '../pages/how-to/how-to';
@@ -24,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StartingPage,
     GameSetupPage,
     AddUserPage,
-    HowToPage
+    HowToPage,
+    SaveProgressPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StartingPage,
     GameSetupPage,
     AddUserPage,
-    HowToPage
+    HowToPage,
+    SaveProgressPage
   ],
   providers: [
     StatusBar,
