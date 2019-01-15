@@ -12,9 +12,18 @@ import { SaveProgressPage } from '../pages/save-progress/save-progress';
 
 import { AddUserPage } from '../pages/add-user/add-user';
 import { HowToPage } from '../pages/how-to/how-to';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from './firebaseConfig';
+import { AuthenticationProvider } from '../providers/authentication/authentication';
+import { AngularFireAuth } from 'angularfire2/auth';
+
 
 @NgModule({
   declarations: [
@@ -26,11 +35,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GameSetupPage,
     AddUserPage,
     HowToPage,
-    SaveProgressPage
+    SaveProgressPage,
+    LoginPage,
+    RegisterPage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig.firebase),
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,12 +55,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GameSetupPage,
     AddUserPage,
     HowToPage,
-    SaveProgressPage
+    SaveProgressPage,
+    LoginPage,
+    RegisterPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthenticationProvider,
+    AngularFireAuth
   ]
 })
 export class AppModule {}

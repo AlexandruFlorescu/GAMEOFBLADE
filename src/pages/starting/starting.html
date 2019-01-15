@@ -24,7 +24,7 @@
       <ion-row>
         <ion-col>
           <ion-fab>
-            <button ion-fab>How to</button>
+            <button ion-fab (click)='openHowTo()'>How to</button>
           </ion-fab>
         </ion-col>
         <ion-col>
@@ -37,6 +37,12 @@
             <button ion-fab>Share</button>
           </ion-fab>
         </ion-col>
+
+          <ion-col>
+            <ion-fab>
+              <button ion-fab (click)='openLogin()'>Login</button>
+            </ion-fab>
+          </ion-col>
 
       </ion-row>
     </ion-grid>
